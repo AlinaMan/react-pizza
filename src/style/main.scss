@@ -5,15 +5,20 @@
   src: url("../assets/fonts/ProximaNova-Regular.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Proxima Nova Bold";
+  src: url("../assets/fonts/ProximaNova-Bold.ttf") format("truetype");
+}
+
 body {
   margin: 0;
   padding: 40px;
   background-color: $body-bc;
-  min-height: calc(100vh - 30px);
+  min-height: calc(100vh - 80px);
   .main {
     border-radius: 10px;
     background-color: white;
-    min-height: calc(100vh - 30px);
+    min-height: calc(100vh - 160px);
     padding: 40px;
     position: relative;
     hr {
@@ -23,6 +28,10 @@ body {
       left: -40px;
       margin: 40px 0;
     }
+    &-content {
+      max-width: 1024px;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -30,8 +39,16 @@ h1 {
   color: $h1;
 }
 
+h2, h3 {
+  color: $h2;
+}
+
 p {
   color: $p;
+}
+
+b {
+  font-family: "Proxima Nova Bold", Tahoma, sans-serif;
 }
 
 * {
@@ -42,14 +59,17 @@ p {
   font-family: 'Proxima Nova', Tahoma, sans-serif;
 }
 
-@media (max-width: 676px) { 
+@media (max-width: 796px) { 
   body {
     padding: 25px;
+    min-height: calc(100vh - 50px);
     .main {
       padding: 25px;
+      min-height: calc(100vh - 100px);
       hr {
         width: calc(100% + 48px);
         left: -25px;
+        margin: 25px 0;
       }
     }
   }
@@ -58,11 +78,14 @@ p {
 @media (max-width: 350px) { 
   body {
     padding: 15px;
+    min-height: calc(100vh - 30px);
     .main {
       padding: 15px;
+      min-height: calc(100vh - 60px);
       hr {
         width: calc(100% + 28px);
         left: -15px;
+        margin: 15px 0;
       }
     }
   }

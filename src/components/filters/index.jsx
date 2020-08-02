@@ -1,10 +1,10 @@
 import React from 'react';
 import './style.scss';
 
-export default ({ f }) => (
-  <ul className="filters">
-    {f.map((item, idx) => <Filter key={idx} name={item.name} active={item.active} />)}
+export default ({ data, cn }) => (
+  <ul className={cn}>
+    {data.map((item, idx) => <Item key={idx} name={item.name} active={item.active} />)}
   </ul>
 );
 
-const Filter = ({ name, active }) => <li className={active ? 'active' : ''}>{name}</li>;
+const Item = ({ name, active }) => <li className={active ? 'active' : ''}>{name}</li>;

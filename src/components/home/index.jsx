@@ -1,27 +1,20 @@
 import React from 'react';
 import Filter from '../filters';
 import Sort from '../filters/sort';
+import Items from '../items';
 import './style.scss';
 
 export default () => (
   <>
-    <ContentTop />
-    <Content />
+    <div className="content__top">
+      <Filter data={filters} cn='filters' />
+      <Sort by={sortby} />
+    </div>
+    <div className="content">
+      <h2 className="title">Все пиццы</h2>
+      <Items items={items} />
+    </div>
   </>
-);
-
-const ContentTop = () => (
-  <div className="content__top">
-    <Filter f={filters} />
-    <Sort by={sortby} />
-  </div>
-);
-
-const Content = () => (
-  <div className="content">
-    {/* <Title />
-    <Items /> */}
-  </div>
 );
 
 const filters = [
@@ -62,5 +55,38 @@ const sortby = [
   {
     name: 'Алфавиту',
     active: 0,
+  },
+];
+
+const items = [
+  {
+    name: "Чизбургер-пицца",
+    img_path: "/images/img1.jpg",
+    min_price: 395
+  },
+  {
+    name: "Чизбургер-пицца",
+    img_path: "/images/img1.jpg",
+    min_price: 395
+  },
+  {
+    name: "Чизбургер-пицца",
+    img_path: "/images/img1.jpg",
+    min_price: 395
+  },
+  {
+    name: "Чизбургер-пицца",
+    img_path: "/images/img1.jpg",
+    min_price: 395
+  },
+  {
+    name: "Чизбургер-пицца",
+    img_path: "/images/img1.jpg",
+    min_price: 395
+  },
+  {
+    name: "Чизбургер-пицца",
+    img_path: "/images/img1.jpg",
+    min_price: 395
   },
 ];

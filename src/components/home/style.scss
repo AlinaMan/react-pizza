@@ -1,7 +1,23 @@
 .content {
+  h2 {
+    margin: 35px 0;
+  }
   &__top {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+  }
+}
+
+@media(max-width: 796px) {
+  .content h2 {
+    margin: 25px 0;
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 575px) {
+  .content__top {
+    flex-direction: column;
   }
 }
